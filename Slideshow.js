@@ -203,7 +203,7 @@ export default class Slideshow extends Component {
             const imageComponent = (
               <View key={index}>
                 <CachedImage
-                  source={{uri: imageObject}}
+                  source={imageObject}
                   style={{height, width}} resizeMode="cover" />
                 {textComponent}
               </View>
@@ -212,7 +212,7 @@ export default class Slideshow extends Component {
               <View key={index} style={styles.containerImage}>
                 <View style={styles.overlay}>
                   <CachedImage
-                      source={{uri: imageObject}}
+                    source={imageObject}
                     style={{height, width}} resizeMode="cover" />
                 </View>
                 {textComponent}

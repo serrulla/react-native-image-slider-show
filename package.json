@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kamalpandey/react-native-image-slider-show/issues"
   },
-  "homepage": "https://github.com/kamalpandey/react-native-image-slider-show#readme"
+  "homepage": "https://github.com/kamalpandey/react-native-image-slider-show#readme",
+  "dependencies": {
+    "react-native-cached-image": "^1.4.3"
+  }
 }
