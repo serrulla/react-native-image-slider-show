@@ -12,6 +12,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
+import {CachedImage} from 'react-native-cached-image';
 
 const reactNativePackage = require('react-native/package.json');
 const splitVersion = reactNativePackage.version.split('.');
@@ -201,8 +202,8 @@ export default class Slideshow extends Component {
             );
             const imageComponent = (
               <View key={index}>
-                <Image
-                  source={imageObject}
+                <CachedImage
+                  source={{uri: imageObject}}
                   style={{height, width}} resizeMode="cover" />
                 {textComponent}
               </View>
@@ -210,8 +211,8 @@ export default class Slideshow extends Component {
             const imageComponentWithOverlay = (
               <View key={index} style={styles.containerImage}>
                 <View style={styles.overlay}>
-                  <Image
-                    source={imageObject}
+                  <CachedImage
+                      source={{uri: imageObject}}
                     style={{height, width}} resizeMode="cover" />
                 </View>
                 {textComponent}
